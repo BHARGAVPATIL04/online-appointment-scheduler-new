@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🚫 Prevent horizontal scroll */
+  background: linear-gradient(to right, #f4f6ff, #eaf0ff);
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 6%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #6a5af9;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.signin {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.book-now {
+  text-decoration: none;
+  background: linear-gradient(90deg, #6a5af9, #8b6cff);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(106, 90, 249, 0.3);
+}
+
+/* ===== FORM SECTION ===== */
+.booking-form-section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 90%;
+}
+
+.booking-form-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.booking-form-section p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-section {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+label span {
+  color: #d13b3b;
+}
+
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+  width: 100%;
+  max-width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #7a5cf1;
+  box-shadow: 0 0 0 3px rgba(122, 92, 241, 0.2);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.confirm-btn,
+.cancel-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 220px;
+  max-width: 100%;
+}
+
+.confirm-btn {
+  background: linear-gradient(to right, #7b5bfa, #9c6dfc);
+  color: #fff;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(to right, #6a4ff0, #8a5af9);
+}
+
+.cancel-btn {
+  background: #f4f4f4;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+  background: #eee;
+}
+
+.required-note {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+/* ===== APPOINTMENT LIST ===== */
+.appointment-list {
+  margin: 40px auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 90%;
+  overflow-x: hidden;
+}
+
+.appointment-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #fafafa;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.appointment-item button {
+  background: #ff6666;
+  border: none;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.appointment-item button:hover {
+  background: #e05555;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #f9fafb;
+  color: #333;
+  padding: 60px 8%;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo {
+  flex: 1 1 250px;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  color: #6a5acd;
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+
+.footer-logo p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.footer-links {
+  display: flex;
+  flex: 2 1 600px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #6a5acd;
+}
+
+.footer-bottom {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE FIXES ===== */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-form-section {
+    padding: 25px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .confirm-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  .appointment-list {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 5%;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .booking-form-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .appointment-item {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 40px 6%;
+  }
+}
+@media (max-width: 500px) {
+  .nav-buttons {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+}
